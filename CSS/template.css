@@ -1,0 +1,98 @@
+/*BASE RULES*/
+/*NOTE: Other fonts for browsers that might not have one of the fonts available*/
+
+body, html{
+    margin: 0
+    padding: 0
+    height: 100%;
+    font-family: serif, sans-serif;
+    background-color: #1969B2;
+}
+
+blockquote{
+    text-indent: 5em;
+    text-align: left;
+    padding: 2em;
+}
+
+/*FORMS*/
+
+input{
+    border: 1px solid lightgray;
+    padding: 4px;
+}
+
+button{
+    border: 1px solid lightgray;
+    padding: 4px;
+}
+
+select{
+    border:
+}
+
+/*LAYOUT RULES*/
+
+#container
+
+#container::after
+
+#top-nav
+
+#footer{
+    text-align: center;
+
+}
+
+/*GRID RULES*/
+
+.col{
+    float: left;
+    padding: 1em;
+}
+
+.col2{
+    width: 67%;
+}
+
+.col1{
+    width:27%;
+}
+
+/*COMPONENT RULES*/
+
+.inline-nav li{
+
+}
+
+.inline-nav a{
+    text-decoration: ;
+}
+
+.inline-nav a:hover{
+    text-decoration: ;
+}
+ .sign-up{
+
+ }
+
+ .sign-up label{
+
+ }
+ .hero{
+     background: url("...")no-repeat 50% 50%;
+     background-size: cover;
+     height: 250px;
+ }
+ .hero h1{
+     text-align: center;
+     padding-top: 2.5em;
+ }
+
+/*THEME RULES*/
+
+.primary{
+    background-color: aquamarine;
+    color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My First HTML Form</title>
+</head>
+<body>
+
+<h2>Account Setup Form</h2>
+
+<form method="POST" action="http://requestb.in/1198esf1">
+    <p>
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text">
+    </p>
+    <p>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password">
+    </p>
+    <p>
+        <input type="submit">
+    </p>
+</form>
+
+
+<h2>Email Form</h2>
+
+<form method="POST" action="http://requestb.in/1198esf1">
+    <p>
+        <label for="To">To</label>
+        <input id="To" name="To" type="text">
+    </p>
+    <p>
+        <label for="From">From</label>
+        <input id="From" name="From" type="text">
+    </p>
+    <p>
+        <label for="Subject">Subject</label>
+        <input id="Subject" name="Subject" type="text">
+    </p>
+    <p>
+        <label for="Body">Body</label>
+        <textarea id="Body" name="Body" rows="10" cols="40" placeholder="content goes here"></textarea>
+    </p>
+    <p>
+        <input type="submit">
+    </p>
+    <input type="checkbox" id="email_copy" name="email_copy" value="yes" checked>
+    <label for="email_copy">Would you like a copy of your email sent to a folder?</label>
+</form>
+
+<h2>Multiple Choice Test</h2>
+
+<form>
+<p>What is the capital of Texas?</p>
+<label>
+    <input type="radio" name="q1" value="houston">
+    Houston
+</label>
+<label>
+    <input type="radio" name="q1" value="dallas">
+    Dallas
+</label>
+<label>
+    <input type="radio" name="q1" value="austin">
+    Austin
+</label>
+<label>
+    <input type="radio" name="q1" value="san antonio">
+    San Antonio
+</label>
+<p>What is the capital of Kansas?</p>
+<label>
+    <input type="radio" name="q2" value="houston">
+    Houston
+</label>
+<label>
+    <input type="radio" name="q2" value="dallas">
+    Dallas
+</label>
+<label>
+    <input type="radio" name="q2" value="austin">
+    Austin
+</label>
+<label>
+    <input type="radio" name="q2" value="Topeka">
+    Topeka
+</label>
+<p>Please select all that are parts of cars.</p>
+<label>
+    <input type="checkbox" id="o1" name="o[]" value="tires">
+    Tires
+</label>
+<label>
+    <input type="checkbox" id="o2" name="o[]" value="windshield">
+    Windshield
+</label>
+<label>
+    <input type="checkbox" id="o3" name="o[]" value="grapefruit">
+    Grapefruit
+</label>
+<label>
+    <input type="checkbox" id="o4" name="o[]" value="seatbelt">
+    Seatbelt
+</label>
+<p>
+    <input type="submit">
+</p>
+</form>
+
+<h2>Select Testing</h2>
+<form method="POST" action="http://requestb.in/1jbwmub1">
+    <label for="excitement">Excited?</label>
+    <select id="excitement" name="excitement">
+        <option value="1">Yes</option>
+        <option value="2">No</option>
+    </select>
+    <input type="submit">
+</form>
+
+<h2>Questions</h2>
+<form action="POST" method="http://requestb.in/1jbwmub1">
+    <label for="q1">Which foods are the best?</label>
+    <select id="q1" name="q[]" multiple>
+        <option value="1">Avacado</option>
+        <option value="2">Pizza</option>
+        <option value="3">Dr.Pepper</option>
+        <option value="4">Carrots</option>
+    </select>
+
+    <input type="submit">
+
+</form>
+</body>
+</html>

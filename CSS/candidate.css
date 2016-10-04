@@ -1,0 +1,111 @@
+#musk{
+    margin-top: 10px;
+    width: 350px;
+    border: 1px solid red;
+}
+
+/*#footer {*/
+    /*width: 100%;*/
+    /*height: 120px;*/
+    /*border: 1px solid black;*/
+    /*background-color: D2AEA3;*/
+    /*font-size: medium;*/
+/*}*/
+
+.news {
+    text-align: center;
+    font-family: Copperplate;
+}
+
+img {
+
+}
+
+header {
+    width: 100%;
+    height: 40px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    font-family: Copperplate;
+}
+
+h1 {
+    font-family: Copperplate;
+}
+
+.intro {
+
+}
+
+#class1 {
+    float: right;
+    width: 65%;
+}
+
+#nav {
+    font-family: Copperplate;
+}
+
+#footer1 {
+    margin: 10px;
+    font-family: Copperplate;
+    text-shadow: 1px 1px 1px black;
+    left:0px;
+    bottom:10px;
+    height:70px;
+    width:100%;
+}
+
+body{
+    padding: 5px;
+}
+
+/*Change the page from a 2 column layout to a 1 column layout at a small breakpoint*/
+
+@media (max-width: 750px) {
+    html {
+        column-count: 1;
+    }
+}
+
+/*Make the HeadLine in the hero smaller as necessary*/
+
+
+
+/*Make the form inputs full-width*/
+
+@media (max-width: 500px) {
+    .input {
+        width: 100%;
+    }
+}
+
+
+/*Make the page text smaller*/
+
+@media (max-width: 450px) {
+    body {
+        font-size: 8px;
+    }
+}
+
+/*Make the NavBar stack*/
+
+@media only screen and (max-width: 400px)  {
+    #nav1 {
+        width:100%;
+        float: right;
+    }
+    .nav1-item {
+        width:100%;
+        float:none;
+    }
+}
+
+/*MAKE IMAGE MOVE DOWN*/
+
+@media (max-width: 380px){
+    img{
+        clear: left;
+    }
+}

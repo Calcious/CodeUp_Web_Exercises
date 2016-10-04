@@ -1,0 +1,19 @@
+div{
+    width: 50px;
+    length: 50px;
+    padding: 10rem;
+    margin: 20px;
+    border: 8px solid black;
+}
+
+p{
+    padding: 1px;
+}
+
+.dat-a{
+    background-color: red;
+}
+
+.dat-b{
+    background-color: blue;
+}
