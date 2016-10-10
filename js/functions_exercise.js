@@ -93,3 +93,10 @@ console.log(sumofSquares(10,25));
 
 //add functionality to divide() that checks if the divisor is zero and outputs,
 //"divisor must not be zero."
+
+// function isNumeric(input){
+//     if(!isNan(input)){
+//         return !isNan(input);
+//     }
+//
+// }
