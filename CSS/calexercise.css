@@ -1,0 +1,39 @@
+#calcucontainer{
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: #00AFF0;
+}
+button{
+    background: lightgray;
+    width: 20%;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 2%;
+    border-radius: 4px;
+}
+#firstNum{
+    width: 38.5%;
+    margin: 3px;
+    border: 2px solid black;
+    text-align: center;
+}
+#secondNum{
+    width: 38.5%;
+    margin: 3px;
+    border: 2px solid black;
+    text-align: center;
+}
+#operator{
+    margin: 3px;
+    border: 2px solid black;
+    width: 5%;
+    text-align: center;
+}
+#totalArea{
+    width: 90%;
+    margin: 3px;
+    border: 2px solid black;
+    padding: 5px;
+    text-align: center;
+}
