@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Binary Exercise 1020</title>
+</head>
+<body>
+<h1>Binary to Decimal Exercise & Contructor Functions</h1>
+
+
+<script>
+//    var binary = "10100011";
+
+    function binaryToDecimal(binary) {
+        var decimal = 0;
+        var i;
+
+        for (i = 0; i < binary.length; i++) {
+            decimal += binary[i] * Math.pow(2, binary.length - i - 1);
+        }
+        return decimal;
+    }
+    console.log(binaryToDecimal(binary));
+
+    //CONSTRUCTOR FUNCTIONS
+
+var person = new Person("Ryan", "Orsinger");
+var person2 = new Person("Cameron", "Holland");
+var person3 = new Person("Fernando", "Mendoza");
+
+    function Person(firstName, lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.fullName = function(){
+         return this.firstName + " " + this.lastName;
+        };
+        return this;
+        }
+    console.log(person.fullName());
+    console.log(person2.fullName());
+    console.log(person3.fullName());
+</script>
+</body>
+</html>
+<!--1: 163, 2: 45, 3: 3370, 4: 239, 5: 66, -->
