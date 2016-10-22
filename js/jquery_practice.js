@@ -1,5 +1,18 @@
 /**
  * Created by Calcious on 10/21/16.
  */
-$("li").css('font-size', '20px');
-$("h1, p, li").css('border', '1px solid #F00');
+$("h1").click(function () {
+    $(this).css("background-color", "red");
+});
+$("p").dblclick(function () {
+    $(this).css("font-size", "18px");
+});
+
+$('li').hover(
+    function() {
+        $(this).css('color', 'red');
+    },
+    function() {
+        $(this).css('color', 'black');
+    }
+);
