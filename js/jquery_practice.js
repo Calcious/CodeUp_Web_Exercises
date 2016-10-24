@@ -16,3 +16,8 @@ $('li').hover(
         $(this).css('color', 'black');
     }
 );
+
+var randNum = 5;
+
+document.write("randNum++ =", randNum++, "<br>");
+document.write("--randNum =", randNum++, "<br>");

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script src="js/jquery-3.1.1.js"></script>
+<script>
+    "use strict";
+    var konami = $(document).keyup("38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13");
+
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+        if(konami){
+            alert("Konammiiiii!");
+        }
+    });
+
+
+
+</script>
+</body>
+</html>
+
+<!--38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13-->
