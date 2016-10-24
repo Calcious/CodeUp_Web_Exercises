@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQUERY FAQ</title>
+    <style>
+        .invisible{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<h1>JQUERY FAQ</h1>
+<script src="js/jquery-3.1.1.js"></script>
+
+<dl>
+    <dt>Are the trees green?</dt>
+        <dd class="invisible">Very Green!</dd>
+    <dt>Is the sky blue?</dt>
+        <dd class="invisible">Deep Blue!</dd>
+    <dt>Are there animals there?</dt>
+        <dd class="invisible">Lots of animals!</dd>
+    <dt>Is there a playground?</dt>
+        <dd class="invisible">A great playground!</dd>
+    <dt>Are there public restrooms?</dt>
+        <dd class="invisible">Yes, we have great restrooms available.</dd>
+    <dt>Is there food/drink?</dt>
+        <dd class="invisible">Yes, and it's delicious!</dd>
+    <dt>What events are held?</dt>
+        <dd class="invisible">Many events--especially Halloween!</dd>
+    <dt>Where are you located?</dt>
+        <dd class="invisible">Here is a link to GMAPS.</dd>
+    <dt>How much is admission?</dt>
+        <dd class="invisible">Prices are listed here.</dd>
+    <dt>How do I leave a review</dt>
+        <dd class="invisible">Leave a review by following this link</dd>
+</dl>
+
+<h1>Park One</h1>
+<ul>
+    <li>
+        Fact One
+    </li>
+    <li>
+        Fact Two
+    </li>
+    <li>
+        Fact Three
+    </li>
+    <li>
+        Fact Four
+    </li>
+</ul>
+<h1>Park Two</h1>
+<ul>
+    <li>
+        Fact One
+    </li>
+    <li>
+        Fact Two
+    </li>
+    <li>
+        Fact Three
+    </li>
+    <li>
+        Fact Four
+    </li>
+</ul>
+<h1>Park Three</h1>
+<ul>
+    <li>
+        Fact One
+    </li>
+    <li>
+        Fact Two
+    </li>
+    <li>
+        Fact Three
+    </li>
+    <li>
+        Fact Four
+    </li>
+</ul>
+<h1>Park Four</h1>
+<ul>
+    <li>
+        Fact One
+    </li>
+    <li>
+        Fact Two
+    </li>
+    <li>
+        Fact Three
+    </li>
+    <li>
+        Fact Four
+    </li>
+</ul>
+
+
+<script>
+    $("dt").on("click", function(){
+        console.log("I am working");
+      $(this).next().toggleClass("invisible");
+    });
+
+//    $("li").on("click", function(){
+//        console.log("I am working part 2.");
+//        $(this).parent().addClass("invisible");
+//    });
+
+//    $("ul").on("click", function(){
+//        console.log("I am working 2");
+//        $(this).children().first().css("font-weight", "bold");
+//    });
+
+    $("ul").each(function(){
+        $(this).children().first().css("font-weight", "bold");
+    });
+
+    $("li").click(function(){
+        $(this).parent().addClass("invisible");
+    });
+
+    $("h3").click(function(){
+        $(this).next().removeClass("invisible");
+    });
+</script>
+</body>
+</html>

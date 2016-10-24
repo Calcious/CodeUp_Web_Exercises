@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQUERY Methods</title>
+</head>
+<body>
+<h1 id="title">JQUERY Methods</h1>
+
+<table>
+    <tr>
+        <th>Delete</th>
+        <th>Name</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+
+
+        <td>Louis</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+
+
+        <td>Zack</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+
+
+        <td>Ryan</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+
+
+        <td>Fernando</td>
+    </tr>
+</table>
+<button>Delete</button>
+
+<script src="js/jquery-3.1.1.js"></script>
+<script>
+    console.log($("#title).html()")); //getter
+    $("#title").html("New text");  //setter
+
+    $("input[type=checkbox]").on("click", function(){
+        $this.parent().parent().addClass("danger"); //tr
+        console.log("YAY!");
+    }
+
+
+</script>
+
+</body>
+</html>
