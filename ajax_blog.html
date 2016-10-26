@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX Blog</title>
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script src="js/jquery-2.2.4.js"></script>
+<div id="posts" class="container marketing">
+    <h1>Justin's Amazing Blog Button</h1>
+
+
+
+    <button id="text"></button>
+</div>
+
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+
+
+    function feedDiv(blogInfo) {
+        blogInfo.forEach(function(tool){
+            $("#posts").append(tool.title + tool.content + tool.categories  + tool.date);
+        });
+    }
+
+
+
+
+    $("button").click(function () {
+        $.ajax("data/blog.json").done(feedDiv)
+                .fail(function () {
+                    alert("There was an error!");
+                }).always(function () {
+            console.log("And we're finished!");
+        });
+    });
+
+
+</script>
+</body>
+</html>

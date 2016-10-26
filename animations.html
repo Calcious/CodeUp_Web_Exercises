@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animations Exercises</title>
+    <style>
+        .square{
+            background-color: green;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+        #green-square{
+            background-color: green;
+        }
+        #red-square{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<h1>Animations Exercises</h1>
+<div id="green-square" class="square"></div>
+<div id="red-square" class="square"></div>
+<script src="js/jquery-3.1.1.js"></script>
+
+
+
+
+<script>
+    var completionAnimation = function () {
+        $("#red-square").animate({
+            left: "+=30px",
+            top: "+=50px"
+        }, 2000);
+    };
+    $("#green-square").animate({
+        left: "30px",
+        top: "50px"
+    }, 2000, completionAnimation);
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script src="js/jquery-2.2.4.js"></script>
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Categories</th>
+    </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+<button>AJAX REFRESH</button>
+
+
+<script>
+    (function () {
+        "use strict";
+        // TODO: Create an ajax GET request for /data/inventory.json
+
+        function feedTable(response) {
+            response.forEach(function(tool){
+                $("#insertProducts").append("<tr><td>" + tool.title + "</td><td>" + tool.quantity + "</td><td>" + tool.price + "</td><td>" + tool.categories + "</tr></td>");
+            });
+        }
+
+        // TODO: Take the data from inventory.json and append it to the products table
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+        //             its contents and fields
+        //       HINT: You will want to target #insertProducts for your new HTML elements
+
+//Getting data to the table
+        $("button").click(function () {
+            $.ajax("data/inventory.json").done(feedTable)
+                    .fail(function () {
+                        alert("There was an error!");
+                    }).always(function () {
+                console.log("And we're finished!");
+            });
+        });
+
+
+    })();
+
+    //REVIEW
+    //Create an AJAX get request to data/inventory.json
+    //write a .done() method
+    //write a .fail() method
+
+    //var ajaxObject = $.get("data/inventory.json");
+
+    //ajaxObject.done(function(response){
+    //console.log(response)
+
+    //write code here that parses the response and writes HTML
+    //anytime we have an array, we're probably going to have a forEach
+
+    //var htmlContent = ""
+    //response.forEach(function(tool){
+    //htmlContent += "tr><td>"
+    //      +tool.title + </td><td>
+    //      +tool.quantity + </td><td>
+    //      +tool.price + </td><td>
+    //      +tool.price + </td></tr>;
+    //})
+    //      console.log(htmlContent)
+    //      $("#insertProducts").append(htmlContent);
+    //});
+
+    //ajaxObject.fail(function(error){
+    //console.log(error)
+    //});
+
+
+
+</script>
+
+
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
