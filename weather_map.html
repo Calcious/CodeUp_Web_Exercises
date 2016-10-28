@@ -6,21 +6,44 @@
     <link rel="stylesheet" href="CSS/bootstrap.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <style type="text/css">
+
+    <style>
+        body{
+            background-color: #00AFF0;
+        }
+        #gmap-canvas {
+            width: 770px;
+            height: 481px;
+            margin: 20px;
+        }
+
         #map-canvas {
             width: 770px;
-            height: 360px;
+            height: 550px;
             background-color: lightcyan;
+            margin: 15px;
         }
-        .forCast{
+
+        .forCast {
             width: 200px;
-            height: 200px;
+            height: 400px;
             background-color: #e6e6e6;
             border: 2px solid black;
             margin: 28px;
         }
-        .weatInfo{
+
+        .weatInfo {
             margin: 10px;
+            text-align: center;
+        }
+
+        button {
+            margin: 20px;
+            width: 80%;
+        }
+        input{
+            margin: 20px;
+            width: 80%;
             text-align: center;
         }
     </style>
@@ -28,40 +51,91 @@
 </head>
 <body>
 <script src="js/jquery-2.2.4.js"></script>
+
 <div class="container marketing">
-<div id="map-canvas">
-<h1>Weather Map Project</h1>
-    <h3>San Antonio, TX</h3>
-
-    <div class="forCast col-md-4" id="day1">
-    <div class="weatInfo" id="degree">number</div>
-    <div class="weatInfo" id="icon">icon</div>
-    <div class="weatInfo" id="clouds">clouds</div>
-    <div class="weatInfo" id="humidity">humidity</div>
-    <div class="weatInfo" id="wind">wind</div>
-    <div class="weatInfo" id="pressure">pressure</div>
-    </div>
-    <div class="forCast col-md-4" id="day2">
-    <div class="weatInfo" id="degree">number</div>
-    <div class="weatInfo" id="icon">icon</div>
-    <div class="weatInfo" id="clouds">clouds</div>
-    <div class="weatInfo" id="humidity">humidity</div>
-    <div class="weatInfo" id="wind">wind</div>
-    <div class="weatInfo" id="pressure">pressure</div>
-    </div>
-    <div class="forCast col-md-4" id="day3">
-    <div class="weatInfo" id="degree">number</div>
-    <div class="weatInfo" id="icon">icon</div>
-    <div class="weatInfo" id="clouds">clouds</div>
-    <div class="weatInfo" id="humidity">humidity</div>
-    <div class="weatInfo" id="wind">wind</div>
-    <div class="weatInfo" id="pressure">pressure</div>
-    </div>
+    <div id="map-canvas">
+        <h1>Weather Map Project</h1>
+        <h3>San Antonio, TX</h3>
 
 
+        <!--DAY 1 -->
+        <div class="forCast col-md-4" id="day1">
+
+            <div class="weatInfo">HIGH || LOW</div>
+            <div class="weatInfo" id="degree"></div>
+            <div class="weatInfo"></div>
+            <div class="weatInfo" id="icon"></div>
+            <div class="weatInfo">CLOUD ACTIVITY</div>
+            <div class="weatInfo" id="clouds"></div>
+            <div class="weatInfo">HUMIDITY</div>
+            <div class="weatInfo" id="humidity"></div>
+            <div class="weatInfo">WIND</div>
+            <div class="weatInfo" id="wind"></div>
+            <div class="weatInfo">PRESSURE</div>
+            <div class="weatInfo" id="pressure"></div>
+
+        </div>
+
+        <!--DAY 2 -->
+        <div class="forCast col-md-4" id="day2">
+
+            <div class="weatInfo">HIGH || LOW</div>
+            <div class="weatInfo" id="d2degree"></div>
+            <div class="weatInfo" id="d2icon"></div>
+            <div class="weatInfo" id="d2icon"></div>
+            <div class="weatInfo">CLOUD ACTIVITY</div>
+            <div class="weatInfo" id="d2clouds"></div>
+            <div class="weatInfo">HUMIDITY</div>
+            <div class="weatInfo" id="d2humidity"></div>
+            <div class="weatInfo">WIND</div>
+            <div class="weatInfo" id="d2wind"></div>
+            <div class="weatInfo">PRESSURE</div>
+            <div class="weatInfo" id="d2pressure"></div>
+
+        </div>
+
+        <!--DAY 3 -->
+        <div class="forCast col-md-4" id="day3">
+
+            <div class="weatInfo">HIGH || LOW</div>
+            <div class="weatInfo" id="d3degree"></div>
+            <div class="weatInfo"></div>
+            <div class="weatInfo" id="d3icon"></div>
+            <div class="weatInfo">CLOUD ACTIVITY</div>
+            <div class="weatInfo" id="d3clouds"></div>
+            <div class="weatInfo">HUMIDITY</div>
+            <div class="weatInfo" id="d3humidity"></div>
+            <div class="weatInfo">WIND</div>
+            <div class="weatInfo" id="d3wind"></div>
+            <div class="weatInfo">PRESSURE</div>
+            <div class="weatInfo" id="d3pressure"></div>
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+    <!--button to refresh-->
+    <button>UPDATE FORECAST @ MARKER LOCATION</button>
+
+    <!--Lat/LNG display-->
+    <input type="text" placeholder="LAT/LNG DISPLAY" id="ltLng">
+
+    <!-- div to hold map -->
+    <div id="gmap-canvas"></div>
 </div>
-</div>
+
+
+
+
 <script src="js/weather_map.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRFCp-RltsaA0pF-ZhOWMUCRUIiAM3zYc"></script>
+<script src="js/apipractice.js"></script>
 </body>
 </html>

@@ -2,23 +2,23 @@
  * Created by Calcious on 10/19/16.
  */
 <!-- Script to show address on map -->
-(function() {
+(function () {
     "use strict";
 
     // Set our map options
     var mapOptions = {
         // Set the zoom level
-        zoom: 19,
+        zoom: 12,
 
         // This sets the center of the map at our location
         center: {
-            lat:  29.426791,
+            lat: 29.426791,
             lng: -98.489602
         }
     };
 
     // Render the map
-    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    var map = new google.maps.Map(document.getElementById("gmap-canvas"), mapOptions);
 
     // Include code from previous example
 
@@ -30,7 +30,7 @@
     var geocoder = new google.maps.Geocoder();
 
 // Geocode our address
-    geocoder.geocode({ "address": address }, { "Blanco Cafe" : restAdr }, function(results, status) {
+    geocoder.geocode({"address": address}, {"Blanco Cafe": restAdr}, function (results, status) {
 
         // Check for a successful result
         if (status == google.maps.GeocoderStatus.OK) {
@@ -44,47 +44,40 @@
         }
     });
     // Create lat and long for our marker position
-    var codeup = { lat: 29.426791, lng: -98.489602 };
-    var blancoCafe = { lat: 29.4281, lng: -98.4914};
+    var codeup = {lat: 29.426791, lng: -98.489602};
+    var blancoCafe = {lat: 29.4281, lng: -98.4914};
 
     // Add the marker to our existing map
-    var marker = new google.maps.Marker({
-        position: codeup,
-        map: map
+    // var marker = new google.maps.Marker({
+    //     position: codeup,
+    //     map: map
+    // });
+    // var restMarker = new google.maps.Marker({
+    //     position: blancoCafe,
+    //     map: map
+    // });
+    //Dragable Marker
+    var dragMarker = new google.maps.Marker({
+        position: {
+            lat: 29.423017,
+            lng: -98.48527
+        }, map: map,
+        draggable: true
     });
-        var restMarker = new google.maps.Marker({
-            position: blancoCafe,
-            map: map
 
-    });
+
     // Create a new infoWindow object with content
-    var infowindow = new google.maps.InfoWindow({
-        content: "Changing the world, one programmer at a time."
-    });
-    var resInfowindow = new google.maps.InfoWindow({
-        content: "The Original Blanco Cafe. <strong>  They have a great breakfast menu!</strong>"
-    });
+    // var infowindow = new google.maps.InfoWindow({
+    //     content: "Changing the world, one programmer at a time."
+    // });
+    // var resInfowindow = new google.maps.InfoWindow({
+    //     content: "The Original Blanco Cafe. <strong>  They have a great breakfast menu!</strong>"
+    // });
 
 // Open the window using our map and marker
-    infowindow.open(map, marker);
-    resInfowindow.open(map, restMarker);
+//     infowindow.open(map, marker);
+//     resInfowindow.open(map, restMarker);
 })();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // function onPositionR(position){
