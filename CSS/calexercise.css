@@ -1,8 +1,16 @@
+h1{
+    text-align: center;
+}
+
 #calcucontainer{
     width: 25%;
     border: 2px solid black;
     border-radius: 4px;
     background-color: #00AFF0;
+    margin-left: 0;
+    margin-right: 0;
+    margin: auto;
+    padding: 35px;
 }
 button{
     background: lightgray;
@@ -11,7 +19,9 @@ button{
     font-weight: 500;
     margin: 2%;
     border-radius: 4px;
+    padding: 5px;
 }
+
 #firstNum{
     width: 38.5%;
     margin: 3px;
